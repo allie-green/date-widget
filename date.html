@@ -4,101 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=decive-width, initial-scale=1.0" />
     <title>Date Widget</title>
-
-    <style>
-      body {
-        font-family: monospace;
-        font-weight: bold;
-        background-color: transparent;
-        margin: 0;
-        margin-top: 20px;
-      }
-      .container{
-        border-radius: 5px;
-        border: solid 2px rgb(37, 170, 43);
-        min-width: 110px;
-        width: fit-content;
-        display: flex;
-        justify-content: center;
-        padding: 8px;
-      }
-      .widget {
-        color: rgb(37, 170, 43);
-
-      }
-      .day_num{
-        display: flexbox; 
-      }
-
-      .day, .num {
-      display: inline-block;
-      }
-
-      .day {
-        font-size: 1.7em;
-      }
-      .num {
-        font-size: 2em;
-      }
-      .month{
-        font-size: 2em;
-      }
-      p{
-        font-size: 1.7em;
-        margin: 0;
-      }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <div class="container">
-      
       <div class="widget">
         <div class="day_num">
-          <div class="day" id="day"><p></div>
-          <div class="num" id="num"><p></div>
+          <div class="day" id="day"><p></p></div>
+          <div class="num" id="num"><p></p></div>
         </div>
-        <div class="month" id="month"><p></div>
+        <div class="month" id="month"><p></p></div>
       </div>
     </div>
-
-    <script>
-
-      function dispalyDate(today) {
-        const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        const monthNames = [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December",
-        ];
-
-        var dayName = days[today.getDay()];
-        var monthName = monthNames[today.getMonth()];
-        var date = today.getDate();
-        
-        document.getElementById("day").innerHTML = dayName;
-        
-        document.getElementById("num").innerHTML = date;
-
-        document.getElementById("month").innerHTML = monthName;
-
-      }
-
-      function dispalyWidget() {
-        var today = new Date();
-        dispalyDate(today);
-      }
-
-      dispalyWidget();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
